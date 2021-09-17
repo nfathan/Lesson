@@ -1,81 +1,149 @@
 body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+  font: 14px "Brush Script MT", cursive;
+  margin: 20px;
+  color: #346751;
+  background-color: #161616;
 }
 
 ol, ul {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .square {
-    background: #fff;
-    border: 1px solid #999;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 50px;
-    height: 50px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 50px;
+  background: transparent;
+  color: brown;
+  border: 1px solid #f7d3ba;
+  /* float: left; */
+  font-size: 74px;
+  font-weight: bold;
+  /* line-height: 50px; */
+  height: 90px;
+  width: 90px;
+  /* margin: 2px; */
+  /* margin-left: -2px;
+  margin-top: -2px; */
+  /* padding: 0; */
+  /* text-align: center; */
 }
 
 .square:focus {
-    outline: none;
+  outline: none;
 }
 
 .kbd-navigation .square:focus {
-    background: #ddd;
+  background: #ddd;
 }
 
-.board-row:after {
-    clear: both;
-    content: "";
-    display: table;
+/* .board {
+  background-color:  aqua;
+  border: solid 5px #630a10;
+} */
+
+.board-row {
+  display: flex;
+  justify-content: center;
 }
+
+/* .board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+} */
 
 .game {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0 200px auto;
+  /* display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around; */
+  margin: 0 80px auto;
+  /* padding: 140px 20px; */
+  /* background-color: rosybrown; */
+}
+
+.game h1 {
+  font-size: 66px;
+  margin: 0;
+}
+
+.game h1, div {
+  text-align: center;
 }
 
 .game-board {
-    padding: 80px 40px;
-    background-color: #630a10;
-    border-radius: 10px;
+  /* flex-basis: 50%; */
+  margin: 20px 400px;
+  padding: 40px 0;
+  /* background-color: #630a10; */
+  border: 10px solid #f7d3ba;
+  border-radius: 20px;
 }
 
-.game-info {
-    margin-left: 20px;
+/* .game-info {
+  flex-basis: 50%;
+  font-size: 40px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 30px;
+  color: #161616;
+  background-color: #f7d3ba;
+} */
+
+.game-info h1 {
+  font-size: 46px;
+  color: brown;
+  margin: 30px;
 }
 
 .status {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.history {
+  border-radius: 20px;
+  padding: 20px;
+  color: #161616;
+  background-color: #f7d3ba;
+}
+
+.history h1 {
+  font-size: 46px;
+  color: #161616;
+  margin: 0;
+}
+
+.history button {
+  padding: 15px;
+  margin: 5px;
+  color: #161616;
+  background-color: #a6aa9c;
+  border-radius: 10px;
+  border: none;
 }
 
 @media (max-width: 1000px) {
-    .game {
-        margin: 0 100px auto;
-    }
+  .game {
+    margin: 0 100px auto;
+    padding: 0;
+  }
+
+  .game-board {
+    margin: 20px 100px;
+  }
 }
 
 @media (max-width: 670px) {
-    .game {
-        flex-direction: column;
-        margin: 0 auto;
-    }
+  .game {
+    flex-direction: column;
+    margin: 0 auto;
+  }
 
-    .game-board {
-        padding: 90px 60px;
-        margin: 0 auto;
-        margin-bottom: 20px;
-    }
+  .game-board {
+    /* padding: 90px 60px; */
+    margin: 20px 0;
+    /* margin-bottom: 20px; */
+  }
 
-    .game-info {
-        margin: 0 auto;
-    }
+  .game-info {
+    margin: 0 auto;
+  }
 }
